@@ -9,6 +9,7 @@ const double COMMON_PADDING = 1;
 const double Font_Size = 20;
 const int Text_L = 0xFFFFFFFF;
 const int Text_R = 0xFF00FF00;
+const int Text_B = 0x1FFFFFFF;
 ///+─────────+──────────────+────────────+──────────+─
 ///   | あ ア | い イ  |う ウ  | え エ  | お オ
 ///+─────────+──────────────+────────────+──────────+─
@@ -30,6 +31,86 @@ const int Text_R = 0xFF00FF00;
 ///
 /// ぱ パpa ぴ ピpi ぷ プpu ぺ ペpe ぽ ポpo              ぴ ゃ ピ ャpya ぴ ゅ ピ ュpyu ぴ ょ ピ ョpyo
 ///+─────────+──────────────+────────────+──────────+────────+
+
+class Word4 extends ConsumerWidget {
+  const Word4({Key? key, required this.l, required this.r,required this.l2, required this.r2, required this.b, required this.m, required this.c}) : super(key: key);
+  final String l;
+  final String r;
+  final String l2;
+  final String r2;
+  final String b;
+  final String m;
+  final int c;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    Config config = ref.watch(configProvider);
+    return GestureDetector(
+      onTap: () {
+        ref.read(configProvider.notifier).playLocal(m);
+      },
+      child: Container(
+        decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Color(0xFF707070)), right: BorderSide(color: Color(0xFF707070)))),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, //垂直方向居中对齐
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center, //垂直方向居中对齐
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(COMMON_PADDING),
+                  child: Text(
+                      style: TextStyle(
+                        fontSize: Font_Size,
+                        color: Color(Text_R),
+                      ),
+                      l),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(COMMON_PADDING),
+                  child: Text(
+                      style: TextStyle(
+                        fontSize: Font_Size,
+                        color: Color(Text_L),
+                      ),
+                      r),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(COMMON_PADDING),
+                  child: Text(
+                      style: TextStyle(
+                        fontSize: Font_Size,
+                        color: Color(Text_R),
+                      ),
+                      l2),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(COMMON_PADDING),
+                  child: Text(
+                      style: TextStyle(
+                        fontSize: Font_Size,
+                        color: Color(Text_L),
+                      ),
+                      r2),
+                )
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(COMMON_PADDING),
+              child: Text(
+                  style: TextStyle(
+                    color: Color(Text_B),
+                    fontSize: 12,
+                  ),
+                  b),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 class Word extends ConsumerWidget {
   const Word({Key? key, required this.l, required this.r, required this.b, required this.m, required this.c}) : super(key: key);
   final String l;
@@ -79,7 +160,7 @@ class Word extends ConsumerWidget {
                 padding: const EdgeInsets.all(COMMON_PADDING),
                 child: Text(
                     style: TextStyle(
-                      color: Color(Text_L),
+                      color: Color(Text_B),
                       fontSize: 12,
                     ),
                     b),
