@@ -7,7 +7,7 @@
 
 
 #### windows
-<image src="https://user-images.githubusercontent.com/20290812/195782904-ccbe4590-667a-4ada-be71-389f573423ac.png" width="300" alt="windows"/>
+<image src="https://user-images.githubusercontent.com/20290812/195826558-0e0bbab7-6aa7-4f0a-86f5-966ca5d519fd.png" width="300" alt="windows"/>
 
 ### ios
 support (not test)
