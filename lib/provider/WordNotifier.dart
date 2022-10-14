@@ -14,6 +14,12 @@ class ConfigNotifier extends StateNotifier<Config> {
     state = c;
   }
 
+  void changePaint() {
+    Config c = Config();
+    c.showLm = state.showLm;
+    state = c;
+  }
+
   Future<void> playLocal(String mp3) async{
     if(canPlaying){
       canPlaying = false;
