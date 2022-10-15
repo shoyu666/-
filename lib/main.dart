@@ -11,10 +11,10 @@ final configProvider = StateNotifierProvider<ConfigNotifier, Config>((ref) {
 });
 const int Text_Hidden = 0xff2B2B2B;
 
-const int Qin_C = 0xff2B2B2B;
-const int Zhou_C = 0xff2B2B2B;
-const int BanZhou_C = 0xff2B2B2B;
-const int Ao_C = 0xff2B2B2B;
+const int Qin_C = 0xff292130;
+const int Zhou_C = 0xff323232;
+const int BanZhou_C = 0xff2b3228;
+const int Ao_C = 0xff33292f;
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized(); //不加这个强制横/竖屏会报错
@@ -86,14 +86,14 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
           child: Expanded(
             child: StaggeredGrid.count(crossAxisCount: 12, mainAxisSpacing: 4, crossAxisSpacing: 4, children: const <Widget>[
               A(a: 1, b: 1, c: WEmpty()),
-              A(a: 1, b: 1, c: WLabel(left: "あ", right: "段", bottom: "a", mp3: "a.mp3", color: Qin_C)),
-              A(a: 1, b: 1, c: WLabel(left: "い", right: "段", bottom: "i", mp3: "i.mp3", color: Qin_C)),
-              A(a: 1, b: 1, c: WLabel(left: "う", right: "段", bottom: "u", mp3: "u.mp3", color: Qin_C)),
-              A(a: 1, b: 1, c: WLabel(left: "え", right: "段", bottom: "e", mp3: "e.mp3", color: Qin_C)),
-              A(a: 1, b: 1, c: WLabel(left: "お", right: "段", bottom: "o", mp3: "o.mp3", color: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "あ", right: "段", bottom: "a", mp3: "a.mp3", c: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "い", right: "段", bottom: "i", mp3: "i.mp3", c: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "う", right: "段", bottom: "u", mp3: "u.mp3", c: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "え", right: "段", bottom: "e", mp3: "e.mp3", c: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "お", right: "段", bottom: "o", mp3: "o.mp3", c: Qin_C)),
               A(a: 6, b: 1, c: WEmpty()),
               //あ アa い イi う ウu え エe お オo
-              A(a: 1, b: 1, c: WLabel(left: "あ", right: "行", bottom: "a", mp3: "a_aiueo.mp3", color: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "あ", right: "行", bottom: "a", mp3: "a_aiueo.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "あ", r: "ア", b: "a", m: "a.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "い", r: "イ", b: "i", m: "i.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "う", r: "ウ", b: "u", m: "u.mp3", c: Qin_C)),
@@ -102,7 +102,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               A(a: 6, b: 1, c: WEmpty()),
               //か カka き キki く クku け ケke こ コko
               //き ゃ キ ャkya き ゅ キ ュkyu き ょ キ ョkyo
-              A(a: 1, b: 1, c: WLabel(left: "か", right: "行", bottom: "k", mp3: "k_aiueo.mp3", color: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "か", right: "行", bottom: "k", mp3: "k_aiueo.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "か", r: "カ", b: "ka", m: "ka.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "き", r: "キ", b: "ki", m: "ki.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "く", r: "ク", b: "ku", m: "ku.mp3", c: Qin_C)),
@@ -114,7 +114,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               A(a: 2, b: 1, c: Word4(l: "き", l2: "ょ", r: "キ", r2: "ョ", b: "kyo", m: "kyo.mp3", c: Ao_C)),
               //さ サsa し シshi す スsu せ セse そ ソso
               //し ゃ シ ャsya し ゅ シ ュsyu し ょ シ ョsyo
-              A(a: 1, b: 1, c: WLabel(left: "さ", right: "行", bottom: "s", mp3: "s_aiueo.mp3", color: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "さ", right: "行", bottom: "s", mp3: "s_aiueo.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "さ", r: "サ", b: "sa", m: "sa.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "し", r: "シ", b: "shi", m: "si.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "す", r: "ス", b: "su", m: "su.mp3", c: Qin_C)),
@@ -126,7 +126,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               A(a: 2, b: 1, c: Word4(l: "し",l2: "ょ", r: "シ",r2: "ョ", b: "syo", m: "syo.mp3", c: Ao_C)),
               //た タta ち チchi つ ツ chu て テ te と トto
               //ち ゃ チ ャcya ち ゅ チ ュcyu ち ょ チ ョcyo
-              A(a: 1, b: 1, c: WLabel(left: "た", right: "行", bottom: "t", mp3: "t_aiueo.mp3", color: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "た", right: "行", bottom: "t", mp3: "t_aiueo.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "た", r: "タ", b: "ta", m: "ta.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "ち", r: "チ", b: "chi", m: "ci.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "つ", r: "ツ", b: "chu", m: "cu.mp3", c: Qin_C)),
@@ -138,7 +138,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               A(a: 2, b: 1, c: Word4(l: "ち",l2: "ょ", r: "チ",r2: "ョ", b: "cyo", m: "cyo.mp3", c: Ao_C)),
               //な ナna に ニni ぬ ヌnu ね ネne の ノno
               //に ゃ ニ ャnya に ゅ ニュnyu に ょ ニョnyo
-              A(a: 1, b: 1, c: WLabel(left: "な", right: "行", bottom: "n", mp3: "n_aiueo.mp3", color: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "な", right: "行", bottom: "n", mp3: "n_aiueo.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "な", r: "ナ", b: "na", m: "na.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "に", r: "ニ", b: "ni", m: "ni.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "ぬ", r: "ヌ", b: "nu", m: "nu.mp3", c: Qin_C)),
@@ -150,7 +150,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               A(a: 2, b: 1, c: Word4(l: "に", l2: "ょ", r: "ニ", r2: "ョ", b: "nyo", m: "nyo.mp3", c: Ao_C)),
               //は ハha ひ ヒ hi ふフfu へ ヘhe ほ ホho
               //ひ ゃ ヒ ャhya ひ ゅ ヒ ュhyu ひ ょ ヒ ョhyo
-              A(a: 1, b: 1, c: WLabel(left: "は", right: "行", bottom: "h", mp3: "h_aiueo.mp3", color: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "は", right: "行", bottom: "h", mp3: "h_aiueo.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "は", r: "ハ", b: "ha", m: "ha.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "ひ", r: "ヒ", b: "hi", m: "hi.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "ふ", r: "フ", b: "hu", m: "hu.mp3", c: Qin_C)),
@@ -162,7 +162,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               A(a: 2, b: 1, c: Word4(l: "ひ",l2: "ょ", r: "ヒ",r2: "ョ", b: "kyo", m: "hyo.mp3", c: Ao_C)),
               //ま マma み ミmi む ムmu め メme も モmo
               //み ゃ ミ ャmya み ゅ ミ ュmyu み ょ ミ ョmyo
-              A(a: 1, b: 1, c: WLabel(left: "ま", right: "行", bottom: "m", mp3: "m_aiueo.mp3", color: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "ま", right: "行", bottom: "m", mp3: "m_aiueo.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "ま", r: "マ", b: "ma", m: "ma.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "み", r: "ミ", b: "mi", m: "mi.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "む", r: "ム", b: "mu", m: "mu.mp3", c: Qin_C)),
@@ -173,7 +173,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               A(a: 2, b: 1, c: Word4(l: "み",l2: "ゅ", r: "ミ",r2: "ュ", b: "myu", m: "myu.mp3", c: Ao_C)),
               A(a: 2, b: 1, c: Word4(l: "み",l2: "ょ", r: "ミ",r2: "ョ", b: "myo", m: "myo.mp3", c: Ao_C)),
               //や ヤya 　 ゆ ユyu 　 よ ヨyo
-              A(a: 1, b: 1, c: WLabel(left: "や", right: "行", bottom: "y", mp3: "y_aiueo.mp3", color: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "や", right: "行", bottom: "y", mp3: "y_aiueo.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "や", r: "ヤ", b: "ya", m: "ya.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: WEmpty()),
               A(a: 1, b: 1, c: Word(l: "ゆ", r: "ユ", b: "yu", m: "yu.mp3", c: Qin_C)),
@@ -182,7 +182,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               A(a: 6, b: 1, c: WEmpty()),
               //ら ラra り リri る ルru れ レre ろ ロro
               //り ゃ リ ャrya り ゅ リ ュryu り ょ リ ョryo
-              A(a: 1, b: 1, c: WLabel(left: "ら", right: "行", bottom: "r", mp3: "r_aiueo.mp3", color: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "ら", right: "行", bottom: "r", mp3: "r_aiueo.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "ら", r: "ラ", b: "ra", m: "ra.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "り", r: "リ", b: "ri", m: "ri.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "る", r: "ル", b: "ru", m: "ru.mp3", c: Qin_C)),
@@ -193,7 +193,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               A(a: 2, b: 1, c: Word4(l: "り",l2: "ゅ", r: "リ",r2: "ュ", b: "kyu", m: "kyu.mp3", c: Ao_C)),
               A(a: 2, b: 1, c: Word4(l: "り",l2: "ょ", r: "リ",r2: "ョ", b: "kyo", m: "kyo.mp3", c: Ao_C)),
               //わ ワwa 　 　 　 を ヲwo
-              A(a: 1, b: 1, c: WLabel(left: "わ", right: "行", bottom: "w", mp3: "w_aiueo.mp3", color: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "わ", right: "行", bottom: "w", mp3: "w_aiueo.mp3", c: Qin_C)),
               A(a: 1, b: 1, c: Word(l: "わ", r: "ワ", b: "wa", m: "wa.mp3", c: Qin_C)),
               A(a: 3, b: 1, c: WEmpty()),
               A(a: 1, b: 1, c: Word(l: "を", r: "ヲ", b: "o", m: "o.mp3", c: Qin_C)),
@@ -204,56 +204,54 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               A(a: 10, b: 1, c: WEmpty()),
 
               //が ガga ぎ ギgi ぐ グgu げ ゲge ご ゴgo              ぎ ゃ ギ ャgya ぎ ゅ ギ ュgyu ぎ ょ ギ ョgyo
-              A(a: 1, b: 1, c: WLabel(left: "が", right: "行", bottom: "g", mp3: "g.mp3", color: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "が", r: "ガ", b: "ga", m: "ga.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぎ", r: "ギ", b: "gi", m: "gi.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぐ", r: "グ", b: "gu", m: "gu.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "げ", r: "ゲ", b: "ge", m: "ge.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ご", r: "ゴ", b: "go", m: "go.mp3", c: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "が", right: "行", bottom: "g", mp3: "g.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "が", r: "ガ", b: "ga", m: "ga.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぎ", r: "ギ", b: "gi", m: "gi.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぐ", r: "グ", b: "gu", m: "gu.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "げ", r: "ゲ", b: "ge", m: "ge.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ご", r: "ゴ", b: "go", m: "go.mp3", c: Zhou_C)),
               //
               A(a: 2, b: 1, c: Word4(l: "ぎ", l2: "ゃ", r: "ギ", r2: "ャ", b: "gya", m: "gya.mp3", c: Ao_C)),
               A(a: 2, b: 1, c: Word4(l: "ぎ", l2: "ゅ", r: "ギ", r2: "ュ", b: "gyu", m: "gyu.mp3", c: Ao_C)),
               A(a: 2, b: 1, c: Word4(l: "ぎ", l2: "ょ", r: "ギ", r2: "ョ", b: "gyo", m: "gyo.mp3", c: Ao_C)),
               //ざ ザza じ ジji ず ズzu ぜ ゼze ぞ ゾzo              じ ゃ ジ ャ zya/ja じ ゅ ジ ュ zyu/ju じょジョ zyo/jo
-              A(a: 1, b: 1, c: WLabel(left: "ざ", right: "行", bottom: "z", mp3: "m_aiueo.mp3", color: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ざ", r: "ザ", b: "za", m: "za.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "じ", r: "ジ", b: "ji", m: "ji.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ず", r: "ズ", b: "zu", m: "zu.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぜ", r: "ゼ", b: "ze", m: "ze.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぞ", r: "ゾ", b: "zo", m: "zo.mp3", c: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "ざ", right: "行", bottom: "z", mp3: "m_aiueo.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ざ", r: "ザ", b: "za", m: "za.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "じ", r: "ジ", b: "ji", m: "ji.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ず", r: "ズ", b: "zu", m: "zu.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぜ", r: "ゼ", b: "ze", m: "ze.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぞ", r: "ゾ", b: "zo", m: "zo.mp3", c: Zhou_C)),
               //
               A(a: 2, b: 1, c: Word4(l: "じ",l2:"ゃ",r: "ジ",r2: "ャ", b: "zya/ja", m: "zya.mp3", c: Ao_C)),
               A(a: 2, b: 1, c: Word4(l: "じ",l2:"ゅ",r: "ジ",r2: "ュ", b: "zyu/ju", m: "zyu.mp3", c: Ao_C)),
               A(a: 2, b: 1, c: Word4(l: "じ",l2:"ょ",r: "ジ",r2: "ョ", b: "zyo/jo", m: "zyo.mp3", c: Ao_C)),
               //だ ダda ぢ ヂji づ ヅzu で デde ど ドdo
-              A(a: 1, b: 1, c: WLabel(left: "ま", right: "行", bottom: "d", mp3: "m_aiueo.mp3", color: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "だ", r: "ダ", b: "da", m: "da.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぢ", r: "ヂ", b: "ji", m: "di.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "づ", r: "ヅ", b: "zu", m: "du.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "で", r: "デ", b: "de", m: "de.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ど", r: "ド", b: "do", m: "do.mp3", c: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "ま", right: "行", bottom: "d", mp3: "m_aiueo.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "だ", r: "ダ", b: "da", m: "da.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぢ", r: "ヂ", b: "ji", m: "di.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "づ", r: "ヅ", b: "zu", m: "du.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "で", r: "デ", b: "de", m: "de.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ど", r: "ド", b: "do", m: "do.mp3", c: Zhou_C)),
               //
-              A(a: 2, b: 1, c: Word4(l: "み", l2: "ゃ", r: "ミ", r2: "ャ", b: "mya", m: "mya.mp3", c: Ao_C)),
-              A(a: 2, b: 1, c: Word4(l: "み", l2: "ゅ", r: "ミ", r2: "ュ", b: "myu", m: "myu.mp3", c: Ao_C)),
-              A(a: 2, b: 1, c: Word4(l: "み", l2: "ょ", r: "ミ", r2: "ョ", b: "myo", m: "myo.mp3", c: Ao_C)),
+              A(a: 6, b: 1, c: WEmpty()),
               //ば バba び ビbi ぶ ブbu べ ベbe ぼ ボbo              び ゃ ビ ャbya び ゅ ビ ュbyu び ょ ビ ョbyo
-              A(a: 1, b: 1, c: WLabel(left: "ば", right: "行", bottom: "b", mp3: "m_aiueo.mp3", color: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ば", r: "バ", b: "ba", m: "ba.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "び", r: "ビ", b: "bi", m: "bi.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぶ", r: "ブ", b: "bu", m: "bu.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "べ", r: "ベ", b: "be", m: "be.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぼ", r: "ボ", b: "bo", m: "bo.mp3", c: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "ば", right: "行", bottom: "b", mp3: "m_aiueo.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ば", r: "バ", b: "ba", m: "ba.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "び", r: "ビ", b: "bi", m: "bi.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぶ", r: "ブ", b: "bu", m: "bu.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "べ", r: "ベ", b: "be", m: "be.mp3", c: Zhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぼ", r: "ボ", b: "bo", m: "bo.mp3", c: Zhou_C)),
               //
-              A(a: 2, b: 1, c: Word4(l: "み", l2: "ゃ", r: "ミ", r2: "ャ", b: "mya", m: "mya.mp3", c: Ao_C)),
-              A(a: 2, b: 1, c: Word4(l: "み", l2: "ゅ", r: "ミ", r2: "ュ", b: "myu", m: "myu.mp3", c: Ao_C)),
-              A(a: 2, b: 1, c: Word4(l: "み", l2: "ょ", r: "ミ", r2: "ョ", b: "myo", m: "myo.mp3", c: Ao_C)),
+              A(a: 2, b: 1, c: Word4(l: "び", l2: "ゃ", r: "ビ", r2: "ャ", b: "bya", m: "bya.mp3", c: Ao_C)),
+              A(a: 2, b: 1, c: Word4(l: "び", l2: "ゅ", r: "ビ", r2: "ュ", b: "byu", m: "byu.mp3", c: Ao_C)),
+              A(a: 2, b: 1, c: Word4(l: "び", l2: "ょ", r: "ビ", r2: "ョ", b: "byo", m: "byo.mp3", c: Ao_C)),
               //ぱ パpa ぴ ピpi ぷ プpu ぺ ペpe ぽ ポpo              ぴ ゃ ピ ャpya ぴ ゅ ピ ュpyu ぴ ょ ピ ョpyo
-              A(a: 1, b: 1, c: WLabel(left: "ぱ", right: "行", bottom: "p", mp3: "m_aiueo.mp3", color: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぱ", r: "パ", b: "pa", m: "pa.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぴ", r: "ピ", b: "pi", m: "pi.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぷ", r: "プ", b: "pu", m: "pu.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぺ", r: "ペ", b: "pe", m: "pe.mp3", c: Qin_C)),
-              A(a: 1, b: 1, c: Word(l: "ぽ", r: "ポ", b: "po", m: "po.mp3", c: Qin_C)),
+              A(a: 1, b: 1, c: WLabel(left: "ぱ", right: "行", bottom: "p", mp3: "m_aiueo.mp3", c: BanZhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぱ", r: "パ", b: "pa", m: "pa.mp3", c: BanZhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぴ", r: "ピ", b: "pi", m: "pi.mp3", c: BanZhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぷ", r: "プ", b: "pu", m: "pu.mp3", c: BanZhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぺ", r: "ペ", b: "pe", m: "pe.mp3", c: BanZhou_C)),
+              A(a: 1, b: 1, c: Word(l: "ぽ", r: "ポ", b: "po", m: "po.mp3", c: BanZhou_C)),
               //
               A(a: 2, b: 1, c: Word4(l: "ぴ", l2: "ゃ", r: "ピ", r2: "ャ", b: "pya", m: "pya.mp3", c: Ao_C)),
               A(a: 2, b: 1, c: Word4(l: "ぴ", l2: "ゅ", r: "ピ", r2: "ュ", b: "pyu", m: "pyu.mp3", c: Ao_C)),
