@@ -50,7 +50,7 @@ class Word4 extends ConsumerWidget {
         ref.read(configProvider.notifier).playLocal(m);
       },
       child: Container(
-        decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Color(0xFF707070)), right: BorderSide(color: Color(0xFF707070)))),
+        decoration: BoxDecoration(color:  Color(c),border: Border(bottom: BorderSide(color: Color(0xFF707070)), right: BorderSide(color: Color(0xFF707070)))),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center, //垂直方向居中对齐
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -127,7 +127,9 @@ class Word extends ConsumerWidget {
         ref.read(configProvider.notifier).playLocal(m);
       },
       child: Container(
-        decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Color(0xFF707070)), right: BorderSide(color: Color(0xFF707070)))),
+        decoration: BoxDecoration(
+            color:  Color(c),
+            border: Border(bottom: BorderSide(color: Color(0xFF707070)), right: BorderSide(color: Color(0xFF707070)))),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center, //垂直方向居中对齐
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -207,12 +209,12 @@ class Word extends ConsumerWidget {
 }
 
 class WLabel extends ConsumerWidget {
-  const WLabel({Key? key, required this.left, required this.right, required this.bottom, required this.mp3, required this.color}) : super(key: key);
+  const WLabel({Key? key, required this.left, required this.right, required this.bottom, required this.mp3, required this.c}) : super(key: key);
   final String left;
   final String right;
   final String bottom;
   final String mp3;
-  final int color;
+  final int c;
   static const double COMMON_PADDING = 1;
 
   @override
@@ -223,7 +225,7 @@ class WLabel extends ConsumerWidget {
         ref.read(configProvider.notifier).playLocal(mp3);
       },
       child: Container(
-        decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Color(0xFF707070)), right: BorderSide(color: Color(0xFF707070)))),
+        decoration: BoxDecoration(color:  Color(c),border: Border(bottom: BorderSide(color: Color(0xFF707070)), right: BorderSide(color: Color(0xFF707070)))),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center, //垂直方向居中对齐
           crossAxisAlignment: CrossAxisAlignment.center,
